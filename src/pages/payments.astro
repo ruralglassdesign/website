@@ -6,11 +6,11 @@ import Hero from '../components/Hero.astro';
 
 ---
 
-<BaseLayout title="Investment | Rural Glass Design" description="Information on investing in stained glass art">
+<BaseLayout title="Payments | Rural Glass Design" description="Information on investing in stained glass art">
 	<div class="stack gap-20">
-		<main class="wrapper investment">
+		<main class="wrapper payments">
 			<Hero
-				title="Investment"
+				title="Payments"
 				tagline="How to purchase stained glass artwork"
 			>
 			</Hero>
@@ -18,7 +18,7 @@ import Hero from '../components/Hero.astro';
 			<section>
 				<h2 class="section-title">Custom Artwork</h2>
 				<div class="content">
-					<p>Each piece of artwork that I create is custom designed to fit your desires and specifications. We can work together to bring your art to life while respecting your budget. There are examples of past pieces that I have created with their pricin on <a href="https://docs.google.com/forms/d/e/1FAIpQLSetTEzBsCF5gBybczvru50t65hZvTTdF_KFFJ5HcCnQoaJjoA/viewform?usp=dialog">my commission form</a>.</p>
+					<p>Each piece of artwork that I create is custom designed to fit your desires and specifications. We can work together to bring your art to life while respecting your budget. There are examples of past pieces that I have created with their pricing on <a href="https://docs.google.com/forms/d/e/1FAIpQLSetTEzBsCF5gBybczvru50t65hZvTTdF_KFFJ5HcCnQoaJjoA/viewform?usp=dialog">my commission form</a>.</p>
 				</div>
 			</section>
 			<section>
@@ -41,7 +41,7 @@ import Hero from '../components/Hero.astro';
 
 
 <style>
-	.investment {
+	.payments {
 		display: flex;
 		flex-direction: column;
 		gap: 3.5rem;
@@ -53,7 +53,7 @@ import Hero from '../components/Hero.astro';
         align-items: center;
     }
 
-    .investment :global(a) {
+    .payments :global(a) {
         max-width: 20rem;
     }
 
@@ -68,6 +68,11 @@ import Hero from '../components/Hero.astro';
 		flex-direction: column;
 		gap: 0.5rem;
 		color: var(--gray-200);
+	}
+
+	#paypal-container-LZDARZUZZBUHJ {
+		width: 100% !important;
+		overflow: auto;
 	}
 
 	.section-title {
