@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
-import CallToAction from '../components/CallToAction.astro';
+
 ---
 
 <BaseLayout title="Investment | Rural Glass Design" description="Information on investing in stained glass art">
@@ -23,11 +23,15 @@ import CallToAction from '../components/CallToAction.astro';
 			</section>
 			<section>
 				<h2 class="section-title">Submitting payments</h2>
-				<div class="content">
+				<div class="content payment">
 					<p>Need to submit a payment?</p>
-					<CallToAction href="#">
-						PayPal Button
-					</CallToAction>
+                    <script is:inline src="https://www.paypal.com/sdk/js?client-id=BAANtzXAynp0wHk-oy10AKLO0WfNAR8RRv83nR38e5Q1jyTwh79MMiBxwhhB6KcmmnxV7WZ8KOkKnC4A3U&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+                    <div id="paypal-container-LZDARZUZZBUHJ"></div>
+                    <script is:inline>
+                        paypal.HostedButtons({
+                            hostedButtonId: "LZDARZUZZBUHJ",
+                        }).render("#paypal-container-LZDARZUZZBUHJ")
+                    </script>
 				</div>
 			</section>
 		</main>
@@ -42,6 +46,12 @@ import CallToAction from '../components/CallToAction.astro';
 		flex-direction: column;
 		gap: 3.5rem;
 	}
+
+    .payment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .investment :global(a) {
         max-width: 20rem;
