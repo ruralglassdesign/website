@@ -45,7 +45,9 @@ const { Content } = await render(entry);
 				<div class="stack gap-10 content">
 					{entry.data.media_url && <img src={entry.data.media_url} alt={'Stained glass art'} />}
 				</div>
-				<a href={entry.data.permalink}>Check this out on Instagram</a>
+				<div class="stack details">
+					<a href={entry.data.permalink}><Icon icon="instagram-logo" size="1.2em" /> Instagram</a>
+				</div>
 			</main>
 		</div>
 		<ContactCTA />

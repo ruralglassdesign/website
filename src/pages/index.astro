@@ -33,11 +33,9 @@ const projects = (await getCollection('work'))
 					tagline="I am a Creative Artist Designing and Making Stained Glass Art"
 					align="start"
 				>
-					<div class="roles">
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Designer</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Maker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Artist</Pill>
-					</div>
+					<CallToAction href="https://docs.google.com/forms/d/e/1FAIpQLSetTEzBsCF5gBybczvru50t65hZvTTdF_KFFJ5HcCnQoaJjoA/viewform?usp=dialog">
+						Commission Form
+					</CallToAction>
 				</Hero>
 
 				<img
@@ -96,7 +94,6 @@ const projects = (await getCollection('work'))
 	}
 
 	.hero img {
-		aspect-ratio: 5 / 4;
 		object-fit: cover;
 		object-position: top;
 		border-radius: 1.5rem;
