@@ -36,7 +36,7 @@ const { Content } = await render(entry);
 					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
 					<Hero title="" align="start">
 						<div class="details">
-							<p class="description">{entry.data.caption}</p>
+							<p class="description" set:html={entry.data.caption} />
 						</div>
 					</Hero>
 				</div>
@@ -139,6 +139,7 @@ const { Content } = await render(entry);
 
 		.details {
 			flex-direction: row;
+			justify-content: center;
 			gap: 2.5rem;
 		}
 
