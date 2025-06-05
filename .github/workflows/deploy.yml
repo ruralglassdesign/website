@@ -19,8 +19,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-        VITE_ACCESS_TOKEN: ${{ secrets.VITE_ACCESS_TOKEN }}
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
